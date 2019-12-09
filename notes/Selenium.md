@@ -18,7 +18,7 @@ pip install selenium
 
 4、启动selenium
 
-![start_driver](E:\Web-Automation-Testing\images\start_driver.png)
+![start_driver](../images/start_driver.png)
 
 此代码可以使用selenium启动chrom浏览器，打开百度页面
 
