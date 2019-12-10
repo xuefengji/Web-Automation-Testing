@@ -53,3 +53,12 @@ findelement_by_xpath
 4、根据属性name定位
 
 findelement_by_name
+
+5、获取元素属性
+
+get_attribute
+
+## 等待
+
+webdriverwait
+
