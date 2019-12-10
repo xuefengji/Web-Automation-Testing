@@ -36,3 +36,20 @@ EC.title_contains('百度一下')      //返回值为True或False
 
 ## 元素定位
 
+1、根据id定位
+
+findelement_by_id
+
+2、根据class_name：
+
+findelement_by_class_name:获取一组元素，为web Element类型，默认会操作第一个元素
+
+findelements_by_class_name：获取一组元素，为list类型，选择元素时可以操作list的方式获取
+
+3、根据xpath定位
+
+findelement_by_xpath
+
+4、根据属性name定位
+
+findelement_by_name
