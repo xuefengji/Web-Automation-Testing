@@ -70,9 +70,61 @@ keyword = driver.find_element_by_name('wd')
 button = driver.find_element_by_css_selector("input[value='百度一下']")
 ```
 
-#### css样式定位方式
+###### css定位方式
 
++ 根据标签名定位，
 
+  ```
+  kw = driver.find_elements_by_css_selector('input') 其中input为标签名
+  ```
+
++ 根据id定位
+
+  ```
+  kw = driver.find_elements_by_css_selector('#kw')  kw为input这个标签的id属性
+  
+  kw = driver.find_elements_by_css_selector('input#kw') 表示id为kw的input
+  ```
+
++ 根据class定位
+
+  ```
+  kw = driver.find_elements_by_css_selector('.s_ipt') s_ipt为class名
+  kw = driver.find_elements_by_css_selector('input.s_ipt') 表示class为s_ipt的input
+  ```
+
++ 根据属性值定位
+
+  ```
+  kw = driver.find_elements_by_css_selector('input[name="wd"]') 定位name属性为wd的input标签元素
+  kw = driver.find_elements_by_css_selector('input[name="wd"][id='kw']') 定位name属性为wd,id为kw的input标签元素
+  
+  支持模糊匹配：
+  + span[class ^=bg]    匹配所有span标签class属性值bg开头的元素
+  
+  + span[class $=rap]    匹配所有span标签class属性值rap结尾的元素
+  
+  + span[class *=quick]    匹配所有span标签class属性值中间有quick的元素
+  
+  ```
+
++ 层级元素定位
+
+  ```
+  1、子元素定位，必须是直接子元素，>表示直接子元素
+  span>input   定位span元素下的input元素
+  form>span>input  定位form下的input标签元素
+  
+  2、后代元素，是某一个元素的所有子元素，不止直接子元素，用空格表示后代元素
+  span input   定位span元素下所有的input元素，所有层次的input
+  css中表示后代元素的其他方式：
+  span:first-child  表示第一个后代元素
+  span input:last-shild  表示
+  
+  
+  ```
+
++ 
 
 ## 等待
 
