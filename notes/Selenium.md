@@ -38,7 +38,9 @@ EC.title_contains('百度一下')      //返回值为True或False
 
 1、根据id定位
 
-findelement_by_id
+```
+keyword = driver.find_element_by_id('s_kw_wrap')
+```
 
 2、根据class_name：
 
@@ -46,17 +48,31 @@ findelement_by_class_name:获取一组元素，为web Element类型，默认会�
 
 findelements_by_class_name：获取一组元素，为list类型，选择元素时可以操作list的方式获取
 
+```
+keyword = driver.find_element_by_id('s_kw_wrap').find_elements_by_class_name('s_ipt')[0]
+```
+
 3、根据xpath定位
 
-findelement_by_xpath
+```
+keyword = driver.find_element_by_xpath('//*[@id="kw"]')   #使用xpath获取元素
+```
 
 4、根据属性name定位
 
-findelement_by_name
+```
+keyword = driver.find_element_by_name('wd') 
+```
 
-5、获取元素属性
+5、根据css样式定位
 
-get_attribute
+```
+button = driver.find_element_by_css_selector("input[value='百度一下']")
+```
+
+#### css样式定位方式
+
+
 
 ## 等待
 
