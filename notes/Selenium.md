@@ -118,13 +118,22 @@ button = driver.find_element_by_css_selector("input[value='百度一下']")
   2、后代元素，是某一个元素的所有子元素，不止直接子元素，用空格表示后代元素
   span input   定位span元素下所有的input元素，所有层次的input
   css中表示后代元素的其他方式：
-  span:first-child  表示第一个后代元素
-  span input:last-shild  表示
-  
+  span:first-child  表示定位span父元素的第一个元素
+  span：first-of-child  表示定位span父元素的第一个span元素
+  span input：first-child  表示定位span标签下，第一个元素
+  span input:last-shild  表示span的最后一个元素
+  span:nth-child(2)   表示span父元素的第2个元素
   
   ```
 
-+ 
++ 兄弟元素定位
+
+```
+1、span + input    表示定位span元素后的第一个兄弟元素input元素
+2、span ~ input  表示定位span元素后的所有兄弟元素input
+```
+
+附： https://www.jianshu.com/p/612dfaf39ce3 
 
 ## 等待
 
