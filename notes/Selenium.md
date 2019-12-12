@@ -173,3 +173,54 @@ element = driver.find_elements_by_css_selector('input[name=wd]')
 
 3、隐式等待
 
+
+
+## 获取元素属性值
+
+```
+element = driver.find_elements_by_css_selector('input[name=wd]')
+element.__getattribute__('value')
+
+__getattribute__：获取属性的值
+```
+
+## random
+
+```
+for i in range(5):    
+	username = random.sample('1234sdfdg',5)    
+	user = '.'.join(username)    
+	print(user)             //dgdf4
+```
+
+## Pillow（操作图片）
+
+1、安装：pip install pillow
+
+2、简单用法
+
+```
+from PIL import Image
+from selenium import webdriver
+driver = webdriver.Chrome()
+driver.get('http://www.baidu.com')
+driver.save_screenshot('E:\\test1.png')    #截图保存
+button = driver.find_element_by_id('su')
+print(button.location)     #{'x': 728, 'y': 192}
+left = button.location['x']
+top = button.location['y']
+right = button.size['width'] + left
+bottom = button.size['height'] + top
+im = Image.open('E:\\test1.png')   #打开截图
+img = im.crop((left,top,right,bottom))   #按坐标进行裁剪img.save('E:\\test.png')
+driver.close()
+```
+
+## pytesseract（识别图片中的字符）
+
+```
+image = Image.open('../images/test.png')
+text = pytesseract.image_to_string(image)
+
+注：有报错
+```
