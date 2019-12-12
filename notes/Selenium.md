@@ -149,6 +149,27 @@ driver.get('http://www.baidu.com')
 locator = (By.CSS_SELECTOR,'input[name="wd"]')
 wait=WebDriverWait(driver,5).until(EC.visibility_of_element_located(locator),'元素找到')
 
+WebDriverWait(driver,timeout,poll_frequency=POLL_FREQUENCY,ignored_exceptions=None)
+参数详解：
+driver：当前浏览器驱动
+timeout：设置超时时间，默认以秒为单位
+poll_frequency:设置监测的时间间隔，默认为0.5秒
+ignored_exceptions：超时后的异常信息，默认下抛NoSuchElementException异常
+WebDriverWait一般有until和until_not方法配合使用
+until(method,message)
+until(method,message)
+
 
 ```
+
+2、强制等待：time.sleep
+
+```
+driver = webdriver.Chrome()
+driver.get('http://www.baidu.com')
+time.sleep(5)     //强制设置等待5秒
+element = driver.find_elements_by_css_selector('input[name=wd]')
+```
+
+3、隐式等待
 
