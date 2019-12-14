@@ -227,4 +227,18 @@ text = pytesseract.image_to_string(image)
 1、先安装Tesseract-OCR
 2、将Tesseract-OCR的路径添加至环境变量PATH中
 3、在环境变量中新建一个变量名为TESSDATA_PREFIX，将Tesseract-OCR下的tessdata的路径设置为TESSDATA_PREFIX的值
+
+
+Showapi验证图片：
+1、打开showapi首页，下载sdk，拷贝ShowapiRequest.py文件到目录下，并引入
+   from demos.ShowapiRequest import ShowapiRequest
+2、查看官网api
+r = ShowapiRequest("http://route.showapi.com/1274-2","my_appId","my_appSecret" )     //my_appId为appid号，my_appSecret为appSecret需要根据实际情况修改
+r.addBodyPara("imgUrl", "http://pic.4j4j.cn/upload/pic/20130528/a9117a5351.jpg")
+r.addBodyPara("base64", "")
+r.addFilePara("imgFile", "替换为你的文件")
+#以上三个参数可以三选一
+res = r.post()
+print(res.text) # 返回信息
 ```
+

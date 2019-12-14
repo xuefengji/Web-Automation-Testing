@@ -1,5 +1,5 @@
 from demos.ShowapiRequest import ShowapiRequest
-from selenium import webdriver
+
 
 #使用showapi进行图片识别
 r = ShowapiRequest("http://route.showapi.com/1274-2","62626","d61950be50dc4dbd9969f741b8e730f5" )
