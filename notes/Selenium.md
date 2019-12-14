@@ -223,4 +223,8 @@ image = Image.open('../images/test.png')
 text = pytesseract.image_to_string(image)
 
 注：有报错
+解决方案：
+1、先安装Tesseract-OCR
+2、将Tesseract-OCR的路径添加至环境变量PATH中
+3、在环境变量中新建一个变量名为TESSDATA_PREFIX，将Tesseract-OCR下的tessdata的路径设置为TESSDATA_PREFIX的值
 ```
