@@ -61,11 +61,16 @@ class RegisterFunction(object):
         user_name_email = self.get_range_user() + '@163.com'
         user_name = self.get_range_user()
         filename = 'E:/images/test.png'
+        self.save_img('register_code')
+        text = self.get_img_code(filename)
         self.send_info('register_email',user_name_email)
         self.send_info('register_name', user_name)
         self.send_info('register_password', '11111')
-        self.save_img('register_code')
-        text = self.get_img_code(filename)
+        code_error = self.find_element('code_error')
+        if code_error == None:
+            print('注册成功')
+        else:
+            self.driver.save_screenshot('E:/images/code_error.png')
         time.sleep(5)
         self.send_info('register_code',text)
         self.driver.close()
