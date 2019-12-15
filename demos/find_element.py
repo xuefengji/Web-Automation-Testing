@@ -1,8 +1,8 @@
 from util.read_config import ReadConfig
 
 class FindElement(object):
-    #获取driver
-    def get_driver(self,driver):
+    # 获取driver
+    def __init__(self,driver):
         self.driver = driver
 
     #获取配置文件
