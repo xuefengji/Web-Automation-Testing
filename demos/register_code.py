@@ -1,7 +1,7 @@
 #封装注册代码
 from selenium import webdriver
 from PIL import Image
-from ShowapiRequest import ShowapiRequest
+from demos.ShowapiRequest import ShowapiRequest
 import time
 import random
 
