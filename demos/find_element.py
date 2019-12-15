@@ -11,9 +11,12 @@ class FindElement(object):
         data = read_ini.get_value(key)
         by = data.split('>')[0]
         value = data.split('>')[1]
-        if by == 'id':
-            return self.driver.find_element_by_id(value)
-        elif by == 'class':
-            return self.driver.find_element_by_class_name(value)
-        elif by == 'name':
-            return self.driver.find_element_by_name(value)
+        try:
+            if by == 'id':
+                return self.driver.find_element_by_id(value)
+            elif by == 'class':
+                return self.driver.find_element_by_class_name(value)
+            elif by == 'name':
+                return self.driver.find_element_by_name(value)
+        except:
+            return None
