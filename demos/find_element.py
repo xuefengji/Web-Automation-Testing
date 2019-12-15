@@ -19,4 +19,4 @@ class FindElement(object):
             elif by == 'name':
                 return self.driver.find_element_by_name(value)
         except:
-            return None
+            return 1
