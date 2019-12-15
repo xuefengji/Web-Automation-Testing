@@ -2,11 +2,13 @@ import configparser
 
 class ReadConfig(object):
     #初始化读取配置文件
-    def __init__(self,filename=None):
+    def __init__(self,filename=None,section=None):
         if filename == None:
             filename = '../config/cfg.ini'
+        if section == None:
+            section = 'register'
         self.cf = configparser.ConfigParser()
-        self.cf.read(filename)
+        self.cf.read(filename,section)
 
     #获取value值
     def get_value(self,section,key):
