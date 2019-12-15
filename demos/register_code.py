@@ -9,12 +9,18 @@ import random
 
 class RegisterFunction(object):
     #初始化
-    def __init__(self,url):
-        self.driver = self.get_driver(url)
+    def __init__(self,url,i):
+        self.driver = self.get_driver(url,i)
+
 
     # 获取driver
-    def get_driver(self,url):
-        driver = webdriver.Chrome()
+    def get_driver(self,url,i):
+        if i == 0:
+            driver = webdriver.Chrome()
+        elif i == 1:
+            driver = webdriver.Firefox()
+        else:
+            driver = webdriver.edge()
         driver.get(url)
         driver.maximize_window()
         time.sleep(5)
@@ -77,5 +83,6 @@ class RegisterFunction(object):
 
 
 if __name__=='__main__':
-    reg_fun = RegisterFunction('http://www.baidu.com')
-    reg_fun.run_main()
+    for i in range(3):
+        reg_fun = RegisterFunction('http://www.baidu.com')
+        reg_fun.run_main()
