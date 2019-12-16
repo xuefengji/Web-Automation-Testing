@@ -2,6 +2,7 @@ class FirstCase(object):
 
     def test_user_email_error(self):
         login('122','999')
+        #通过assert断言进行判断error
 
     def test_user_name_error(self):
         login('122','999')
