@@ -1,7 +1,9 @@
+from demos.business.register_business import RegisterBusiness
 class FirstCase(object):
-
+    def __init__(self):
+        self.register_b = RegisterBusiness()
     def test_user_email_error(self):
-        login('122','999')
+        self.register_b.login('122','999')
         #通过assert断言进行判断error
 
     def test_user_name_error(self):

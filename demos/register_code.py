@@ -2,7 +2,7 @@
 from selenium import webdriver
 from PIL import Image
 from demos.ShowapiRequest import ShowapiRequest
-from demos.find_element import FindElement
+from demos.base.find_element import FindElement
 import time
 import random
 
