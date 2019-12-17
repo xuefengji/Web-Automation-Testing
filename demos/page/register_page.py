@@ -1,7 +1,7 @@
 from demos.base.find_element import FindElement
 class RegisterPage:
-    def __init__(self):
-        self.fd = FindElement()
+    def __init__(self,driver):
+        self.fd = FindElement(driver)
 
     #获取邮箱
     def get_user_email(self):
