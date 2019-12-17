@@ -8,6 +8,7 @@ class RegisterBusiness(object):
         self.register_h.send_user_name(name)
         self.register_h.send_user_pwd(pwd)
         self.register_h.send_user_code(code)
+        self.register_h.click_button()
 
     #执行操作
     def login_email_error(self,email,name,pwd,code):
