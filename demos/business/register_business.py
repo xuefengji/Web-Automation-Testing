@@ -10,6 +10,13 @@ class RegisterBusiness(object):
         self.register_h.send_user_code(code)
         self.register_h.click_button()
 
+
+    def login_success(self):
+        if self.register_h.get_button_text() == None:
+            return True
+        else:
+            return False
+
     #执行操作
     def login_email_error(self,email,name,pwd,code):
         self.send_info(email,name,pwd,code)
@@ -44,5 +51,4 @@ class RegisterBusiness(object):
             return False
 
 
-    def login_success(self,email,name,pwd,code):
-        self.send_info(email,name,pwd,code)
+

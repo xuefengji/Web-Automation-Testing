@@ -25,3 +25,5 @@ class FirstCase(object):
 
     def test_user_register_success(self):
         register_success = self.register_b.login_success('122@qq.com', '999', '111111', '111111')
+        if register_success == True:
+            print('注册成功')

@@ -32,3 +32,6 @@ class RegisterHandle(object):
     #获取点击按钮
     def click_button(self):
         self.register_p.get_button().click()
+
+    def get_button_text(self):
+        return self.register_p.get_button().text()
