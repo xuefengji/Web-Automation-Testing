@@ -20,15 +20,17 @@ class RegisterPage:
         return self.fd.get_value("register_code")
 
     #获取text
-    def get_text(self,info):
-        if info == 'email':
-            return self.fd.get_value("email_error")
-        elif info == 'username':
-            return self.fd.get_value('name_error')
-        elif info == 'username':
-            return self.fd.get_value('password_error')
-        else:
-            return self.fd.get_value("code_error")
+    def get_email_error_text(self):
+        return self.fd.get_value("email_error")
+
+    def get_name_error_text(self):
+        return self.fd.get_value("name_error")
+
+    def get_password_error_text(self):
+        return self.fd.get_value("password_error")
+
+    def get_code_error_text(self):
+        return self.fd.get_value("code_error")
 
     #获取注册按钮
     def get_button(self):

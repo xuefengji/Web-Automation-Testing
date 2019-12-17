@@ -18,3 +18,17 @@ class RegisterHandle(object):
     #输入验证码
     def send_user_code(self,code):
         self.register_p.get_user_code().send_keys(code)
+
+    def get_text_elemt(self, info):
+        if info == 'email':
+            return self.register_p.get_email_error_text().get_attribute('value')
+        elif info == 'username':
+            return self.register_p.get_name_error_text().get_attribute('value')
+        elif info == 'username':
+            return self.register_p.get_password_error_text().get_attribute('value')
+        else:
+            return self.register_p.get_code_error_text().get_attribute('value')
+
+    #获取点击按钮
+    def click_button(self):
+        self.register_p.get_button().click
