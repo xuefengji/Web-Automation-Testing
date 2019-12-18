@@ -16,4 +16,9 @@ class FirstCase(unittest.TestCase):
 
 
 if __name__=='__main__':
-    unittest.main()
+    # unittest.main()
+    #添加容器
+    suite = unittest.TestSuite()
+    #添加case
+    suite.addTest(FirstCase('test01'))
+    unittest.TestRunner().run(suite)
