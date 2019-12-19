@@ -21,13 +21,13 @@ class RegisterHandle(object):
 
     def get_text_elemt(self, info):
         if info == 'email_error':
-            text =  self.register_p.get_email_error_text().get_attribute('value')
+            text =  self.register_p.get_email_error_text().text
         elif info == 'username_error':
-            text =  self.register_p.get_name_error_text().get_attribute('value')
+            text =  self.register_p.get_name_error_text().text
         elif info == 'password_error':
-            text =  self.register_p.get_password_error_text().get_attribute('value')
+            text =  self.register_p.get_password_error_text().text
         else:
-            text = self.register_p.get_code_error_text().get_attribute('value')
+            text = self.register_p.get_code_error_text().text
         return text
     #获取点击按钮
     def click_button(self):

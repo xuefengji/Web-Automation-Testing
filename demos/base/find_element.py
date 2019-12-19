@@ -19,4 +19,5 @@ class FindElement(object):
             elif by == 'name':
                 return self.driver.find_element_by_name(value)
         except:
+            self.driver.save_screenshot('E:\\test1.png')
             return None
