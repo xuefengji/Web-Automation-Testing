@@ -11,7 +11,7 @@ class FirstCase(unittest.TestCase):
         self.register_b = RegisterBusiness(self.driver)
 
     def tearDown(self):
-        for method_name,error in self._outcome.error:
+        for method_name,error in self._outcome.errors:
             if error:
                 case_name = self._testMethodName
                 file_path = os.path.join(os.getcwd()+'/report/'+ case_name+'.png')
