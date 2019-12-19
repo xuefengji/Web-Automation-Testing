@@ -3,6 +3,7 @@ from selenium import webdriver
 import unittest
 import HTMLTestRunner
 import os
+import sys
 class FirstCase(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
@@ -10,6 +11,11 @@ class FirstCase(unittest.TestCase):
         self.register_b = RegisterBusiness(self.driver)
 
     def tearDown(self):
+        for method_name,error in self._outcome.error:
+            if error:
+                case_name = self._testMethodName
+                file_path = os.path.join(os.getcwd()+'/report/'+ case_name+'.png')
+                self.driver.save_screenshot(file_path)
         self.driver.close()
 
     def test_user_email_error(self):
