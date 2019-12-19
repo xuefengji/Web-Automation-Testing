@@ -1,6 +1,8 @@
 from demos.business.register_business import RegisterBusiness
 from selenium import webdriver
 import unittest
+import HTMLTestRunner
+import os
 class FirstCase(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
@@ -42,4 +44,12 @@ class FirstCase(unittest.TestCase):
         self.assertTrue(register_success)
 
 if __name__=='__main__':
-    unittest.main()
+    # unittest.main()
+    suite = unittest.TestSuite()
+    filename = os.path.join(os.getcwd()+'/report/'+'frist_report.html')
+    f = open(filename,'wb')
+    # 添加case
+    suite.addTest(FirstCase('test01'))
+    # unittest.TestRunner().run(suite)
+    runner = HTMLTestRunner.HTMLTestRunner(stream=f,verbosity=2)
+    runner.run(suite)
