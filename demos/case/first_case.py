@@ -5,6 +5,8 @@ import HTMLTestRunner
 import os
 import sys
 class FirstCase(unittest.TestCase):
+    def setUpClass(cls):
+        cls.filename = 'E:/Imooc/xxx.png'
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.get('http://www.baidu.com')
