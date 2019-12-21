@@ -16,7 +16,8 @@ class GetCode:
         img.save(filename)
 
     #获取验证码
-    def get_img_code(filename):
+    def get_img_code(self,filename):
+        self.save_img()
         r = ShowapiRequest("http://route.showapi.com/1274-2", "62626", "d61950be50dc4dbd9969f741b8e730f5")
         # r.addBodyPara("imgUrl", "http://pic.4j4j.cn/upload/pic/20130528/a9117a5351.jpg")
         r.addFilePara("image", filename)
