@@ -36,4 +36,12 @@ class FirstDdtCase(unittest.TestCase):
 
 
 if __name__=='__main__':
-    unittest.main()
+    #unittest.main()
+    suite = unittest.TestSuite()
+    filename = os.path.join(os.getcwd() + '/report/' + 'frist_report.html')
+    f = open(filename, 'wb')
+    # 添加case
+    suite.addTest(FirstDdtCase('test_register_login'))
+    # unittest.TestRunner().run(suite)
+    runner = HTMLTestRunner.HTMLTestRunner(stream=f, verbosity=2)
+    runner.run(suite)
