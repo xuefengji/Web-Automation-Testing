@@ -51,4 +51,12 @@ class RegisterBusiness(object):
             return False
 
 
+    def register_function(self,email,name,pwd,code,assertCode):
+        self.send_info(email, name, pwd, code)
+        if self.register_h.get_text_elemt(assertCode) == None:
+            print('验证码检验不成功')
+            return True
+        else:
+            return False
+
 
