@@ -16,3 +16,4 @@ class GetExcelData():
         for i in range(self.rows):
             data = self.table.row_values(i)
             result.append(data)
+        return result
