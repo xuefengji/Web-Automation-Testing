@@ -21,32 +21,32 @@ class FirstCase(unittest.TestCase):
         self.driver.close()
 
     def test_user_email_error(self):
-        email_error = self.register_b.login_email_error('122','999','111111','111111')
+        email_error = self.register_b.login_email_error('122','999','111111',self.filename)
         # if email_error == True:
         #     print('注册成功，词条case失败')
         #通过assert断言进行判断error
         self.assertFalse(email_error)
 
     def test_user_name_error(self):
-        name_error = self.register_b.login_name_error('122@qq.com', '999', '111111', '111111')
+        name_error = self.register_b.login_name_error('122@qq.com', '999', '111111', self.filename)
         # if name_error == True:
         #     print('注册成功，词条case失败')
         self.assertFalse(name_error)
 
     def test_user_password_error(self):
-        password_error = self.register_b.login_password_error('122@qq.com', '999', '111111', '111111')
+        password_error = self.register_b.login_password_error('122@qq.com', '999', '111111', self.filename)
         # if password_error == True:
         #     print('注册成功，词条case失败')
         self.assertFalse(password_error)
 
     def test_user_code_error(self):
-        code_error = self.register_b.login_code_error('122@qq.com', '999', '111111', '111111')
+        code_error = self.register_b.login_code_error('122@qq.com', '999', '111111', self.filename)
         # if code_error == True:
         #     print('注册成功，词条case失败')
         self.assertFalse(code_error)
 
     def test_user_register_success(self):
-        register_success = self.register_b.login_success('122@qq.com', '999', '111111', '111111')
+        register_success = self.register_b.login_success('122@qq.com', '999', '111111', self.filename)
         # if register_success == True:
         #     print('注册成功')
         self.assertTrue(register_success)
