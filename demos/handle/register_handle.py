@@ -1,5 +1,5 @@
 from demos.page.register_page import RegisterPage
-from util.get_code import GetCode
+from demos.util.get_code import GetCode
 class RegisterHandle(object):
     def __init__(self,driver):
         self.driver = driver

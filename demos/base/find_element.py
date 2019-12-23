@@ -1,4 +1,4 @@
-from util.read_config import ReadConfig
+from demos.util.read_config import ReadConfig
 
 class FindElement(object):
     # 获取driver

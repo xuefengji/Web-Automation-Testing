@@ -1,8 +1,7 @@
 import ddt
-import unittest
 from demos.business.register_business import RegisterBusiness
 from selenium import webdriver
-from util.excel_util import GetExcelData
+from demos.util.excel_util import GetExcelData
 import unittest
 import HTMLTestRunner
 import os
