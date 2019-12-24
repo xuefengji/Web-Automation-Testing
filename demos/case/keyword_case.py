@@ -12,9 +12,14 @@ class KeywordCase:
                 if is_run == 'yes':
                     method = excel_data.get_col_value(i,4)
                     send_value = excel_data.get_col_value(i,5)
-                    opera_value = excel_data.get_col_value(i,6)
-                    if send_value:
-                        pass
+                    handel_value = excel_data.get_col_value(i,6)
+                    # if send_value:
+                    self.run_method(method,send_value,handel_value)
 
-    def run_method(self):
+    def run_method(self,method,send_value,handel_value):
         action_method = ActionMethod()
+        method_value = getattr(action_method,method)
+        if send_value:
+            method_value(send_value,handel_value)
+        else:
+            method_value(handel_value)
