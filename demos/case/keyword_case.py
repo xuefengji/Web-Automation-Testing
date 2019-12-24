@@ -2,6 +2,7 @@ from demos.util.excel_util import GetExcelData
 from demos.keyword.actionMethod import ActionMethod
 class KeywordCase:
     def run_main(self):
+        self.action_method = ActionMethod()
         excel_data = GetExcelData()
         #获取行数
         excel_rows = excel_data.get_rows()
@@ -17,8 +18,8 @@ class KeywordCase:
                     self.run_method(method,send_value,handel_value)
 
     def run_method(self,method,send_value,handel_value):
-        action_method = ActionMethod()
-        method_value = getattr(action_method,method)
+
+        method_value = getattr(self.action_method,method)
         if send_value:
             method_value(send_value,handel_value)
         else:
