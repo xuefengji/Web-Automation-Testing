@@ -2,8 +2,8 @@ from selenium import webdriver
 from demos.base.find_element import FindElement
 import time
 class ActionMethod():
-    def __init__(self,key):
-        self.driver = self.open_browser(key)
+    def __init__(self):
+        pass
 
     #打开浏览器
     def open_browser(self,key):
