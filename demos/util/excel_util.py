@@ -4,10 +4,12 @@ from xlutils.copy import copy
 class GetExcelData():
     def __init__(self,path_name=None,index=None):
         if path_name == None:
-            path_name = '../config/excel_util.xls'
+            self.path_name = '../config/excel_util.xls'
+        else:
+            self.path_name = path_name
         if index == None:
             index = 0
-        self.excel = xlrd.open_workbook(path_name)
+        self.excel = xlrd.open_workbook(self.path_name)
         self.table = self.excel.sheet_by_index(index)
 
 
@@ -41,8 +43,8 @@ class GetExcelData():
     def write_data(self,row,value):
         write_data = copy(self.excel)
         write_index = write_data.get_sheet(0)
-        write_index.write(row,7,value)
-        write_data.save('../config/excel_util.xls')
+        write_index.write(row,9,value)
+        write_data.save(self.path_name)
 
 
 if __name__=='__main__':
