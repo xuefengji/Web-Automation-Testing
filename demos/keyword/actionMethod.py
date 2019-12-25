@@ -7,13 +7,12 @@ class ActionMethod():
 
     #打开浏览器
     def open_browser(self,key):
-        if key == 'chrom':
-            driver = webdriver.Chrome()
+        if key == 'chrome':
+            self.driver = webdriver.Chrome()
         elif key == 'firefox':
-            driver = webdriver.Firefox()
+            self.driver = webdriver.Firefox()
         else:
-            driver = webdriver.Edge()
-        return driver
+            self.driver = webdriver.Edge()
 
     #输入url
     def send_url(self,url):
@@ -24,7 +23,7 @@ class ActionMethod():
         element = FindElement(self.driver)
         return element.get_value(key)
     #输入元素
-    def send_value(self,key,value):
+    def send_value(self,value,key):
         self.get_element(key).send_keys(value)
 
     #element点击

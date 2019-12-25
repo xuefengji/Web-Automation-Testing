@@ -22,5 +22,7 @@ class KeywordCase:
         method_value = getattr(self.action_method,method)
         if send_value:
             method_value(send_value,handel_value)
-        else:
+        elif send_value == '' and handel_value != '':
             method_value(handel_value)
+        else:
+            method_value()
