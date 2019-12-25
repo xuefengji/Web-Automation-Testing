@@ -36,3 +36,6 @@ class ActionMethod():
     #关闭浏览器
     def driver_close(self):
         self.driver.close()
+
+    def get_title(self):
+        return self.driver.title
