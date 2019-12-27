@@ -1,8 +1,10 @@
 from behave import *
+from features.page.register_page import RegisterPage
 
 use_step_matcher('re')
 @when('I open the register website "([^"]*)"')
 def step_register(context,url):
+    RegisterPage(context)
     context.driver.get(url)
 
 @then('I expect that the title is "([^"]*)"')
