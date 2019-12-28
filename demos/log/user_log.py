@@ -8,6 +8,8 @@ logger.setLevel(logging.DEBUG)   #设置log等级
 
 #写入log文件
 file_consle = logging.FileHandler('./logs/test.log')
+formatter = logging.Formatter(fmt='%(asctime)s %(filename)s[%(lineno)d] %(message)s')
+file_consle.setFormatter(formatter)
 logger.addHandler(file_consle)
 
 logger.debug("test")
