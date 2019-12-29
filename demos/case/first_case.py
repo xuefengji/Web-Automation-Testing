@@ -5,16 +5,18 @@ import HTMLTestRunner
 import os
 from demos.log.user_log import UserLog
 import sys
-user_log = UserLog()
-logger = user_log.get_log()
+
 class FirstCase(unittest.TestCase):
+    @classmethod
     def setUpClass(cls):
         cls.filename = 'E:/Imooc/xxx.png'
+        cls.user_log = UserLog()
+        cls.logger = cls.user_log.get_log()
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.get('http://www.baidu.com')
-        logger.info('test')
-        user_log.close_handle()
+        self.logger.info('test')
+
         self.register_b = RegisterBusiness(self.driver)
 
     def tearDown(self):
@@ -55,6 +57,10 @@ class FirstCase(unittest.TestCase):
         # if register_success == True:
         #     print('注册成功')
         self.assertTrue(register_success)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.user_log.close_handle()
 
 if __name__=='__main__':
     # unittest.main()
