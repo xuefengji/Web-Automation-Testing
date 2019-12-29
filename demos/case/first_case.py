@@ -3,13 +3,18 @@ from selenium import webdriver
 import unittest
 import HTMLTestRunner
 import os
+from demos.log.user_log import UserLog
 import sys
+user_log = UserLog()
+logger = user_log.get_log()
 class FirstCase(unittest.TestCase):
     def setUpClass(cls):
         cls.filename = 'E:/Imooc/xxx.png'
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.get('http://www.baidu.com')
+        logger.info('test')
+        user_log.close_handle()
         self.register_b = RegisterBusiness(self.driver)
 
     def tearDown(self):
