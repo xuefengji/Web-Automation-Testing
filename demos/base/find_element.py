@@ -1,3 +1,6 @@
+"""
+基础类：定位元素，读取配置文件中的信息，按指定的id进行元素定位
+"""
 from demos.util.read_config import ReadConfig
 
 class FindElement(object):

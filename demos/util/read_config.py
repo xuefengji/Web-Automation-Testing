@@ -1,3 +1,7 @@
+'''
+读取配置文件
+'''
+
 import configparser
 
 class ReadConfig(object):
