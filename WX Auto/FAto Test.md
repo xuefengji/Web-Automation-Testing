@@ -13,3 +13,5 @@
   + 安装 Java jdk 
   + 安装 Android SDK 版本（4.7 以上）
   + 配置 adb 环境
+  +  https://blog.csdn.net/qq_39284848/article/details/79770142?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1 
+
