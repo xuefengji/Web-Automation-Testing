@@ -15,3 +15,5 @@
   + 配置 adb 环境
   +  https://blog.csdn.net/qq_39284848/article/details/79770142?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1 
 
++ 安装 FAuto Test 框架
++ 
