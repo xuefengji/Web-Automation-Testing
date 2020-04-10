@@ -18,6 +18,6 @@
 
 + 安装 FAuto Test 框架
 
-+ appium
+  
 
   
