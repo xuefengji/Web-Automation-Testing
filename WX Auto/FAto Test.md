@@ -3,7 +3,7 @@
 ##### 1. 环境搭建
 
 + python 安装
-  + 安装 python3.8 版本
+  + 安装 python2.7 版本
   + 需要用的库
     + uiautomator
     + lxml
