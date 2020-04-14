@@ -35,6 +35,10 @@
 }
    ```
    
+   + jest 默认配置
+   
+     暴露配置文件：npx jest --init
+   
    + Jest 使用的是 commonjs 语法，兼容 import 语法，需要配置babel，将 import 转换为 commonjs 语法
    
      安装：npm install @babel/core@7.4.5 @babel/preset-env@7.4.5 -D
