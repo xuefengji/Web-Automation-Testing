@@ -16,7 +16,7 @@
 
 4. 配置 Jest 环境
 
-   package.json 中将 scripts 中的 test 的值改为 jest
+   + package.json 中将 scripts 中的 test 的值改为 jest
    
    ```
    {
@@ -35,7 +35,25 @@
 }
    ```
    
+   + Jest 使用的是 commonjs 语法，兼容 import 语法，需要配置babel，将 import 转换为 commonjs 语法
    
+     安装：npm install @babel/core@7.4.5 @babel/preset-env@7.4.5 -D
+   
+     项目根目录下新建 .babelrc 文件，配置如下：
+   
+     ```
+     {
+     	"presets":[
+     	["@babel/preset-env",{
+     	"targets":{
+     	"node":"current"
+     	}
+     	}]
+     	]
+     }
+     ```
+   
+     
 
 
 
