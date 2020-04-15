@@ -12,7 +12,7 @@
 
    npm init 
 
-   npm install jset@24.8 -D
+   npm install jest@24.8 -D
 
 4. 配置 Jest 环境
 
@@ -66,6 +66,32 @@
   + toBe  可以匹配引用地址，类似于 object.js 、===
   + toEqual 只匹配内容
   + toBeNull 
+  + toBeUndefined
+  + toBeDefined
+  + toBeTruthy
+  + toBeFalsy
+  + not: not.toBeFalsy
+
++ 数字相关匹配器
+
+  + toBeLessThan : 小于
+
+  + toBeGreaterThan : 大于
+
+  + toBeGreaterThanOrEqual ：大于等于
+
+  + toBeCloseTo : 接近于某一个数
+
+    ```
+    test('toBeCloseTo',()=>{
+    const firstNumber = 0.1;
+    const secondNumber = 0.2;
+    expect(firstNumber + secondNumber).toCloseTo(0.3)
+    })
+    如果使用 toEqual 时会出错，由于 js 在计算浮点数时会出现很多小数，精度不准确，使用toCloseTo 可以得到接近的值
+    ```
+
+    
 
 + 监听 test.js 文件变化
 
