@@ -106,6 +106,10 @@
 + 监听 test.js 文件变化
 
   package.json 中 scripts 中 test 中改为“jest --watchAll” 会实时监控 test.js 文件变化
+  
++ jest 模式
+
+  + 
 
 二、Jest 优点
 
