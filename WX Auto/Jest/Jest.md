@@ -109,7 +109,14 @@
   
 + jest 模式
 
-  + 
+
+
+
+三、Jest 异步测试
+
++ 测试回调函数
+  + test 测试方法中需要加传入 done 函数，然后在函数中需要执行 done 函数
++ 测试 promise 类型的，需要使用 than，然后使用 return 返回
 
 二、Jest 优点
 
