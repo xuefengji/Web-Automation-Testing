@@ -118,6 +118,15 @@
   + test 测试方法中需要加传入 done 函数，然后在函数中需要执行 done 函数
 + 测试 promise 类型的，需要使用 than，然后使用 return 返回
 
+
+
+四、Jest 中的钩子函数
+
++ beforeAll(()=>{})
++ afterAll(()=>{})
++ beforeEach(()=>{})
++ afterEach(()=>{})
+
 二、Jest 优点
 
 + 速度快
