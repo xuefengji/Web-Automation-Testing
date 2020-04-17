@@ -126,6 +126,7 @@
 + afterAll(()=>{})
 + beforeEach(()=>{})
 + afterEach(()=>{})
++ describe 分组
 
 二、Jest 优点
 
