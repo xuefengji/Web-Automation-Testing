@@ -137,7 +137,10 @@
 + afterAll(()=>{})
 + beforeEach(()=>{})
 + afterEach(()=>{})
-+ describe 分组
++ describe 分组：
+  + 最外层的 describe 的 钩子函数对所有的测试用例有效 
+  + 内部的 describe 内的钩子函数只对自己分组的测试用例有效
++ test.only  ：只对某一个使用 only 的测试用例进行执行，其他的测试用例被忽略
 
 二、Jest 优点
 
