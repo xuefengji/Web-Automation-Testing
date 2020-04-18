@@ -2,7 +2,7 @@ function add(a, b){
     return a + b;
 }
 
-function miuns(a, b){
+function minus(a, b){
     return a - b;
 }
 
@@ -12,6 +12,6 @@ function multi(a, b){
 
 module.exports = {
     add,
-    miuns,
+    minus,
     multi
 }

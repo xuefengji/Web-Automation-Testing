@@ -134,13 +134,97 @@
 四、Jest 中的钩子函数
 
 + beforeAll(()=>{})
+
 + afterAll(()=>{})
+
 + beforeEach(()=>{})
+
 + afterEach(()=>{})
+
 + describe 分组：
+
   + 最外层的 describe 的 钩子函数对所有的测试用例有效 
+
+  ```
+  describe('测试',()=>{
+  
+      beforeAll(()=>{
+          console.log('外层beforeAll');
+      })
+  
+      describe('加法',()=>{
+          beforeAll(()=>{
+              console.log('内层beforeAll1');
+          })
+          test('测试加法',() => {
+              expect(add(3,3)).toBe(6);
+          })
+          afterAll(()=>{
+              console.log('内层afterAll1');
+          })
+      })
+      
+      describe('减法',()=>{
+          beforeAll(()=>{
+              console.log('内层beforeAll2');
+          })
+          test('测试减法',() => {
+              expect(minus(3,2)).toBe(1);
+          })
+          afterAll(()=>{
+              console.log('内层afterAll2');
+          })
+      })
+  
+      afterAll(()=>{
+         console.log('外层afterAll');
+          
+      })
+  }
+  )
+  
+  结果为：
+  console.log math.test.js:7
+      外层beforeAll
+  
+    console.log math.test.js:12
+      内层beforeAll1
+  
+    console.log math.test.js:18
+      内层afterAll1
+  
+    console.log math.test.js:24
+      内层beforeAll2
+  
+  
+    console.log math.test.js:7
+      外层beforeAll
+  
+    console.log math.test.js:12
+      内层beforeAll1
+  
+    console.log math.test.js:18
+      内层afterAll1
+  
+    console.log math.test.js:24
+      内层beforeAll2
+  
+    console.log math.test.js:30
+      内层afterAll2
+  
+    console.log math.test.js:35
+      外层afterAll
+  ```
+
+  
+
   + 内部的 describe 内的钩子函数只对自己分组的测试用例有效
+
 + test.only  ：只对某一个使用 only 的测试用例进行执行，其他的测试用例被忽略
+
+注：执行一些测试前的准备，要写在钩子函数中
+
+
 
 二、Jest 优点
 
