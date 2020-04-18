@@ -37,7 +37,18 @@
    
    + jest 默认配置
    
-     暴露配置文件：npx jest --init 会生成 jest.config.js 文件
+     暴露配置文件：npx jest --init 会生成  jest.config.js 文件
+   
+     + coverageDirectory: 测试覆盖率报告的文件夹，使用 npx jest --coverage，也可在package.json 文件中的 scripts 中配置
+   
+       ```
+       {
+       	"coverage":"jest --coverage"
+       }
+       配置后，可以使用 npm run coverage执行测试覆盖率
+       ```
+   
+       
    
    + Jest 使用的是 commonjs 语法，兼容 import 语法，需要配置babel，将 import 转换为 commonjs 语法
    
