@@ -17,3 +17,15 @@ automator.launch({
 注意：使用前必须在开发者工具--设置--安全设置--开启服务端口
 ```
 
++ 跳转 tabBar 页面
+
+  ```
+  automator.launch({
+    cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
+    projectPath: 'E:\\simlove-wechat-mini'
+  }).then(async miniProgram=>{
+    const page = await miniProgram.switchTab("/pages/userCenter/index");
+    //打开开发者工具后跳转个人中心页面
+  })
+  ```
+
