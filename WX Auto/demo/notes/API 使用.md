@@ -77,3 +77,15 @@ automator.launch({
   此时，从首页跳转后，首页关闭，堆栈中只有跳转后的当前页，所以堆栈中只有 1 个页面
   ```
 
++ 关闭所有连接，打开到应用的某个页面: automator.relaunch
+
+  ```
+  automator.relaunch({
+    cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
+    projectPath: 'E:\\simlove-wechat-mini'
+  }).then(async miniProgram=>{
+  
+  })
+  ```
+
+  
