@@ -1,5 +1,7 @@
 #### miniprogram-automator
 
+##### Automator
+
 + 启动并连接开发者工具：automator.launch
 
 ```
@@ -16,6 +18,10 @@ automator.launch({
   
 注意：使用前必须在开发者工具--设置--安全设置--开启服务端口
 ```
+
+
+
+##### miniProgram
 
 + 页面堆栈：miniProgram.pageStack
 
@@ -77,7 +83,7 @@ automator.launch({
   此时，从首页跳转后，首页关闭，堆栈中只有跳转后的当前页，所以堆栈中只有 1 个页面
   ```
 
-+ 关闭当前页面，返回上一页面或多级页面
++ 关闭当前页面，返回上一页面或多级页面：miniProgram.navigateBack()
 
   ```
   automator.launch({
@@ -111,4 +117,61 @@ automator.launch({
   ```
   
 
-+ 
++ 获取当前页面：miniProgram.currentPage()
+
+  ```
+  automator.launch({
+    cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
+    projectPath: 'E:\\simlove-wechat-mini'
+  }).then(async miniProgram=>{
+    const page = await miniProgram.currentPage();
+    console.log(page.path);
+    //pages/index/index
+    const pageStack = await miniProgram.pageStack();
+    console.log(pageStack.length);// 当前页面栈数量 1
+  })
+  
+  ```
+
++ 获取系统信息：miniProgram.systemInfo()
+
+  ```
+  automator.launch({
+    cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
+    projectPath: 'E:\\simlove-wechat-mini'
+  }).then(async miniProgram => {
+    const systemInfo = await miniProgram.systemInfo();
+    console.log(systemInfo);
+    if (systemInfo.platform === 'devtools') {
+      // Do something
+    }
+  })
+  console结果：
+  { model: 'iPhone 5',
+    pixelRatio: 2,
+    windowWidth: 320,
+    windowHeight: 456,
+    system: 'iOS 10.0.1',
+    language: 'zh_CN',
+    version: '7.0.4',
+    screenWidth: 320,
+    screenHeight: 568,
+    SDKVersion: '2.10.4',
+    brand: 'devtools',
+    fontSizeSetting: 16,
+    benchmarkLevel: 1,
+    batteryLevel: 100,
+    statusBarHeight: 20,
+    safeArea:
+     { right: 320,
+       bottom: 568,
+       left: 0,
+       top: 20,
+       width: 320,
+       height: 548 },
+    deviceOrientation: 'portrait',
+    platform: 'devtools',
+    devicePixelRatio: 2 }
+  ```
+
+  
