@@ -174,4 +174,11 @@ automator.launch({
     devicePixelRatio: 2 }
   ```
 
++ 开启真机调试功能：miniProgram.remote
+
+  ```
   
+  ```
+
+  
+
