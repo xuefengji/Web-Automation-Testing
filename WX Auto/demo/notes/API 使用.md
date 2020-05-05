@@ -95,15 +95,20 @@ automator.launch({
   })
   ```
   
-  
-  
 + 关闭所有连接，打开到应用的某个页面: automator.relaunch
 
   ```
-  automator.relaunch({
+  automator.launch({
     cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
     projectPath: 'E:\\simlove-wechat-mini'
   }).then(async miniProgram=>{
-  
+    const page = await miniProgram.reLaunch('/pages/goodsPage/goodsPresellDetail/index?id=3');
+    console.log(page.path);
+    //pages/goodsPage/goodsPresellDetail/index
+  const pageStack = await miniProgram.pageStack();
+    console.log(pageStack.length);// 当前页面栈数量  1
   })
   ```
+  
+
++ 
