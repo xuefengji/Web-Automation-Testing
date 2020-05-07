@@ -116,7 +116,6 @@ automator.launch({
   })
   ```
   
-
 + 获取当前页面：miniProgram.currentPage()
 
   ```
@@ -174,11 +173,17 @@ automator.launch({
     devicePixelRatio: 2 }
   ```
 
-+ 开启真机调试功能：miniProgram.remote
++ 开启真机调试功能：miniProgram.remote()  默认为false，可以传入参数true
 
+  ```
+  automator.launch({
+    cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
+  projectPath: 'E:\\simlove-wechat-mini'
+  }).then(async miniProgram => {
+   await miniProgram.remote();
+   
+  })
   ```
   
-  ```
-
   
 
