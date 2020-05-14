@@ -189,3 +189,7 @@ automator.launch({
 
 ##### Page
 
++ page.path：页面路径
++ page.query：页面参数
++ page.$：获取页面元素
+
