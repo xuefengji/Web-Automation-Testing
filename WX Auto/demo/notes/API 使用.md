@@ -193,3 +193,4 @@ automator.launch({
 + page.query：页面参数
 + page.$：获取页面元素
 
++ page.$$：获取页面元素数组
