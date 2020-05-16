@@ -192,5 +192,5 @@ automator.launch({
 + page.path：页面路径
 + page.query：页面参数
 + page.$：获取页面元素
-
 + page.$$：获取页面元素数组
++ page.waitFor：等待直到指定条件成立
