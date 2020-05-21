@@ -198,3 +198,4 @@ automator.launch({
 + page.setData：设置页面渲染数据
 + page.size：获取页面大小
 + page.scrollTop：获取页面滚动位置
++ page.callMethod：调用页面指定方法
