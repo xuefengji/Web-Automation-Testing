@@ -195,3 +195,4 @@ automator.launch({
 + page.$$：获取页面元素数组
 + page.waitFor：等待直到指定条件成立
 + page.data:  获取页面渲染数据 
++ page.callMethod：调用页面指定方法
