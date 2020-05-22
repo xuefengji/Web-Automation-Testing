@@ -199,3 +199,7 @@ automator.launch({
 + page.size：获取页面大小
 + page.scrollTop：获取页面滚动位置
 + page.callMethod：调用页面指定方法
+
+##### Element
+
++ element.$：在元素范围内获取元素
