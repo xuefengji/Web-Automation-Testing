@@ -198,4 +198,13 @@ automator.launch({
 + page.callMethod：调用页面指定方法
 + page.setData：设置页面渲染数据
 + page.size：获取页面大小
+<<<<<<< HEAD
 + page.scrollTop：获取页面滚动位置
+=======
++ page.scrollTop：获取页面滚动位置
++ page.callMethod：调用页面指定方法
+
+##### Element
+
++ element.$：在元素范围内获取元素
+>>>>>>> 44180682b34797508c5cc7c4b1a6b3a327ac8d11
