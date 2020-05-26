@@ -203,4 +203,7 @@ automator.launch({
 + page.callMethod：调用页面指定方法
 
 
+##### Element
++ element.tagName: 标签名，小写
++ element.$: 在元素范围内获取元素
 
