@@ -14,7 +14,7 @@ describe('index', () => {
   }, 30000)
 
   test('测试',()=>{
-    expect('hello').toMatch('he')
+    expect('hello').toMatch('he');
   })
 
   

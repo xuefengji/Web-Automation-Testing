@@ -11,7 +11,7 @@ automator.launch({
     cliPath: 'E:\\微信web开发者工具\\cli.bat',
     projectPath: 'F:\\simlove-wechat-mini'
   }).then(async miniProgram => {
-    const page = await miniProgram.navigateTo('/page/index/index')
+    const page = await miniProgram.navigateTo('/pages/index/index')
     await page.setData({})
   })
 
@@ -102,3 +102,5 @@ automator.launch({
 // }).then(async miniProgram => {
 //   await miniProgram.remote(true);
 // })
+
+
