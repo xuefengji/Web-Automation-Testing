@@ -5,8 +5,8 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#f5f5f5",
+    "navigationBarTitleText": "MiniProgram",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
