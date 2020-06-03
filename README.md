@@ -1,8 +1,8 @@
 # Web-Automation-Testing
 
 自动化测试研究学习：
-   使用selenium进行web自动化测试
-   微信小程序研究
++ 使用selenium进行web自动化测试
++ 微信小程序研究
 
 
 ### Notes
