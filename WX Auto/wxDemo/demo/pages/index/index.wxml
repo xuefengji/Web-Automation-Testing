@@ -10,7 +10,4 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-  <view>
-     <text>{{time}}</text>
-  </view>
 </view>
