@@ -220,3 +220,4 @@ automator.launch({
 + element.$$：在元素范围内获取元素数组
 + element.size：获取元素大小
 + element.offset: 获取元素绝对位置
++ element.text：获取元素文本
