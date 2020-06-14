@@ -95,6 +95,8 @@ const automator = require('miniprogram-automator');
 //   }
 // })
 
+
+
 //开启真机调试
 // automator.launch({
 //   cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
