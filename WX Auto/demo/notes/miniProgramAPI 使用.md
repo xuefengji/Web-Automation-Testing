@@ -220,8 +220,6 @@ automator.launch({
 + element.$$：在元素范围内获取元素数组
 + element.size：获取元素大小
 + element.offset: 获取元素绝对位置
-<<<<<<< HEAD
 + element.text：获取元素文本
-=======
 + element.text：获取元素文本信息
->>>>>>> fd3dac356543756cac873e176dba0dbcffc1bec6
++ element.attribute：获取元素元素特性
