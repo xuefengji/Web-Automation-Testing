@@ -8,6 +8,9 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  clickme:function(){
+    this.setData({ motto: "Hello xuefeng" })
+  },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
