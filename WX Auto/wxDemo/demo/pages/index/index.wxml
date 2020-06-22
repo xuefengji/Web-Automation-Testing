@@ -11,7 +11,7 @@
     <text class="user-motto">{{motto}}</text>
      <!-- <button bindtap="clickme">点击我</button> -->
   </view>
-  <view wx:if="{{array == 'WEBVIEW'}}">WEBVIEW</view>
+  <!-- <view wx:if="{{array == 'WEBVIEW'}}">WEBVIEW</view>
   <view wx:elif="{{array == 'APP'}}"> APP </view>
-  <view wx:else="{{array == 'MINA'}}"> MINA </view>
+  <view wx:else="{{array == 'MINA'}}"> MINA </view> -->
 </view>
