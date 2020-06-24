@@ -223,3 +223,4 @@ automator.launch({
 + element.text：获取元素文本
 + element.text：获取元素文本信息
 + element.attribute：获取元素元素特性
++ element.property: 获取元素属性
