@@ -12,35 +12,40 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    console.log(111)
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log(222)
+    //设置当前页面不可转发
+    // wx.hideShareMenu()
+    // 设置当前页面可转发
+    wx.showShareMenu()
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log(333)
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    console.log(444)
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    console.log(555)
   },
 
   /**
@@ -62,5 +67,9 @@ Page({
    */
   onShareAppMessage: function () {
 
+    //返回要一个对象
+    return{
+      title: "xxx"
+    }
   }
 })
