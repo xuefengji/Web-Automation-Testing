@@ -1,13 +1,15 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/navigator/navigator",
+    "pages/logs/logs",
+    "pages/index/index"
+
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f5f5f5",
-    "navigationBarTitleText": "MiniProgramDemo",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "Demo",
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
