@@ -17,7 +17,7 @@ describe('index', () => {
     expect('hello').toMatch('he');
   })
 
-  
+
 //   afterAll(async () => {
 //     await miniProgram.close()
 //   })
