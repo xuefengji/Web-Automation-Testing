@@ -9,8 +9,10 @@ describe('index', () => {
 
   beforeAll(async () => {
     miniProgram = await automator.launch({
-        cliPath: 'E:\\微信web开发者工具\\cli.bat',
-        projectPath: 'F:\\simlove-wechat-mini'
+        cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
+        // cliPath: 'E:\\微信web开发者工具\\cli.bat',
+        projectPath: 'E:\\simlove-wechat-mini'
+        // projectPath: 'F:\\simlove-wechat-mini'
     })
     page = await miniProgram.switchTab('/pages/index/index')
     await page.waitFor(500)
