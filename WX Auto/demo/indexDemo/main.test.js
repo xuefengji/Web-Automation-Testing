@@ -11,10 +11,16 @@ describe('index', () => {
     })
     page = await miniProgram.reLaunch('/pages/index/index')
     await page.waitFor(500)
+    // console.log(page)
   }, 30000)
 
-  test('测试',()=>{
-    expect('hello').toMatch('he');
+  test('首页',()=>{
+    expect(page.path).toMatch('pages/index/index');
+  })
+  
+  test('进入商品详情页',()=>{
+    elements = page.$$('.goods-thumb')
+    console.log(elements.length)
   })
 
 

@@ -7,13 +7,13 @@ const automator = require('miniprogram-automator');
 //     await page.setData({})
 //   })
 //连接并启动开发者工具
-// automator.launch({
-//     cliPath: 'E:\\微信web开发者工具\\cli.bat',
-//     projectPath: 'F:\\simlove-wechat-mini'
-//   }).then(async miniProgram => {
-//     const page = await miniProgram.navigateTo('/pages/index/index')
-//     await page.setData({})
-//   })
+automator.launch({
+    cliPath: 'E:\\微信web开发者工具\\cli.bat',
+    projectPath: 'F:\\simlove-wechat-mini'
+  }).then(async miniProgram => {
+    const page = await miniProgram.navigateTo('/pages/index/index')
+    await page.setData({})
+  })
 
 //获取小程序堆栈页面和跳转 tabBar 页面
 // automator.launch({
@@ -107,10 +107,10 @@ const automator = require('miniprogram-automator');
 
 
 //断开与小程序的连接
-automator.launch({
-  cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
-  projectPath: 'E:\\simlove-wechat-mini'
-}).then(async miniProgram => {
-  await miniProgram.disconnect();
-})
+// automator.launch({
+//   cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
+//   projectPath: 'E:\\simlove-wechat-mini'
+// }).then(async miniProgram => {
+//   await miniProgram.disconnect();
+// })
 
