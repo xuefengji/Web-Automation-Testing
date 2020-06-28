@@ -1,7 +1,12 @@
-function getCurrentP(page,select){
-    element = page.$(select)
+function getElement(page,select,flag){
+    if(flag==0){
+        element = page.$(select)
+    }
+    else{
+        element = page.$$(select)
+    }
+   return element
 }
 
-function getElement(){
-    
-}
+
+module.exports = {getElement}

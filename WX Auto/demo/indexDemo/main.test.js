@@ -1,4 +1,6 @@
 const automator = require('miniprogram-automator')
+const opreate = require('./utils/opreate.js')
+const {getElement} = opreate
 
 describe('index', () => {
   let miniProgram
@@ -12,8 +14,9 @@ describe('index', () => {
     })
     page = await miniProgram.switchTab('/pages/index/index')
     await page.waitFor(500)
-    element = await page.$$('.product')
-    // console.log(element.length)
+    element = await getElement(page,'.product',1)
+    console.log(element.length)
+    console.log(element[0])
     // console.log(page)
   }, 30000)
 
@@ -22,8 +25,8 @@ describe('index', () => {
     expect(page.path).toMatch('pages/index/index');
   })
   
-  test('进入商品详情页',()=>{
-    const elements = element[0].$$('.list')
+  test('进入商品详情页',async () => {
+    const elements = await element[0].$$('.list')
     console.log(elements.length)
   })
 
