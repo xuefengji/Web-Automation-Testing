@@ -9,16 +9,16 @@ describe('index', () => {
 
   beforeAll(async () => {
     miniProgram = await automator.launch({
-        cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
-        // cliPath: 'E:\\微信web开发者工具\\cli.bat',
-        projectPath: 'E:\\simlove-wechat-mini'
-        // projectPath: 'F:\\simlove-wechat-mini'
+        // cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
+        cliPath: 'E:\\微信web开发者工具\\cli.bat',
+        // projectPath: 'E:\\simlove-wechat-mini'
+        projectPath: 'F:\\simlove-wechat-mini'
     })
     page = await miniProgram.switchTab('/pages/index/index')
     await page.waitFor(500)
-    element = await getElement(page,'.product',1)
-    console.log(element.length)
-    console.log(element[0])
+    elements = await getElement(page,'goods-thumb',1)
+    // console.log(element.length)
+    // console.log(element[0])
     // console.log(page)
   }, 30000)
 
@@ -28,8 +28,10 @@ describe('index', () => {
   })
   
   test('进入商品详情页',async () => {
-    const elements = await element[0].$$('.list')
-    console.log(elements.length)
+    const element = await elements[0].$$('')
+    console.log(element)
+    await element.tap()
+    console.log(await miniProgram.currentPage())
   })
 
 
