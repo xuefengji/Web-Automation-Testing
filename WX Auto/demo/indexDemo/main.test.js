@@ -25,14 +25,18 @@ describe('index', () => {
   test('首页', async () => {
     //  elements = await page.$$('.classify')
     elements = await page.$$('.goods-item')
+    console.log(elements)
     // clickButton = await elements[0].$('van-stepper-54c9e8')
-     console.log(elements[0].id)
+    //  console.log(elements[0].id)
     // expect(page.path).toMatch('pages/index/index');
   })
   
   test('进入商品详情页', async () => {
+   var id = elements[0].id
+    page = await miniProgram.navigateTo('/pages/goodsPage/goodsPresellDetail/index?id=' + id);
     page = await miniProgram.currentPage()
     console.log(page.path)
+    console.log(await miniProgram.pageStack())
     // console.log(aa)
     // const element = await elements[0].$$('')
     // console.log(element)
