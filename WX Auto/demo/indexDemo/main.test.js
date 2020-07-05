@@ -5,7 +5,7 @@ const {getElement} = opreate
 describe('index', () => {
   let miniProgram
   let page
-  let element
+  let elements
 
   beforeAll(async () => {
     miniProgram = await automator.launch({
@@ -20,15 +20,20 @@ describe('index', () => {
     // console.log(element.length)
     // console.log(element[0])
     // console.log(page)
-  }, 30000)
+  }, 300000)
 
-  test('首页', async()=>{
-     console.log(await page);
+  test('首页', async () => {
+    //  elements = await page.$$('.classify')
+    elements = await page.$$('.goods-item')
+    // clickButton = await elements[0].$('van-stepper-54c9e8')
+     console.log(elements[0].id)
     // expect(page.path).toMatch('pages/index/index');
   })
   
-  test('进入商品详情页', async() => {
-    console.log(111)
+  test('进入商品详情页', async () => {
+    page = await miniProgram.currentPage()
+    console.log(page.path)
+    // console.log(aa)
     // const element = await elements[0].$$('')
     // console.log(element)
     // await element.tap()
