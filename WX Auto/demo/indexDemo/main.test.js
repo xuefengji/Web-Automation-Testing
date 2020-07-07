@@ -1,6 +1,6 @@
 const automator = require('miniprogram-automator')
-const opreate = require('./utils/opreate.js')
-const {getElement} = opreate
+// const opreate = require('./utils/opreate.js')
+// const {getElement} = opreate
 
 describe('index', () => {
   let miniProgram
@@ -9,10 +9,10 @@ describe('index', () => {
 
   beforeAll(async () => {
     miniProgram = await automator.launch({
-        cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
-        // cliPath: 'E:\\微信web开发者工具\\cli.bat',
-        projectPath: 'E:\\simlove-wechat-mini'
-        // projectPath: 'F:\\simlove-wechat-mini'
+        // cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
+        cliPath: 'E:\\微信web开发者工具\\cli.bat',
+        // projectPath: 'E:\\simlove-wechat-mini'
+        projectPath: 'F:\\simlove-wechat-mini'
     })
     page = await miniProgram.reLaunch('/pages/index/index');
     await page.waitFor(500);
@@ -20,7 +20,7 @@ describe('index', () => {
     // console.log(element.length)
     // console.log(element[0])
     // console.log(page)
-  }, 300000)
+  }, 30000)
 
   test('首页', async () => {
     //  elements = await page.$$('.classify')
@@ -32,8 +32,11 @@ describe('index', () => {
   })
   
   test('进入商品详情页', async () => {
-   var id = elements[0].id
-    page = await miniProgram.navigateTo('/pages/goodsPage/goodsPresellDetail/index?id=' + id);
+    var element = await elements[0].$('view')
+    console.log(element.length)
+    await element[0].tap()
+  //  var id = elements[0].id
+  //   page = await miniProgram.navigateTo('/pages/goodsPage/goodsPresellDetail/index?id=' + id);
     page = await miniProgram.currentPage()
     console.log(page.path)
     console.log(await miniProgram.pageStack())
