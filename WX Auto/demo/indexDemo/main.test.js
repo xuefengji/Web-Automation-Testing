@@ -9,10 +9,10 @@ describe('index', () => {
 
   beforeAll(async () => {
     miniProgram = await automator.launch({
-        // cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
-        cliPath: 'E:\\微信web开发者工具\\cli.bat',
-        // projectPath: 'E:\\simlove-wechat-mini'
-        projectPath: 'F:\\simlove-wechat-mini'
+        cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
+        // cliPath: 'E:\\微信web开发者工具\\cli.bat',
+        projectPath: 'E:\\simlove-wechat-mini'
+        // projectPath: 'F:\\simlove-wechat-mini'
     })
     page = await miniProgram.reLaunch('/pages/index/index');
     await page.waitFor(500);
@@ -22,16 +22,13 @@ describe('index', () => {
     // console.log(page)
   }, 30000)
 
-  test('首页', async () => {
+  test('购买商品', async () => {
     //  elements = await page.$$('.classify')
     elements = await page.$$('.goods-item')
     console.log(elements)
     // clickButton = await elements[0].$('van-stepper-54c9e8')
     //  console.log(elements[0].id)
     // expect(page.path).toMatch('pages/index/index');
-  })
-  
-  test('进入商品详情页', async () => {
     var element = await elements[0].$('view')
     console.log(element.length)
     await element[0].tap()
@@ -46,7 +43,6 @@ describe('index', () => {
     // await element.tap()
     // console.log(await miniProgram.currentPage())
   })
-
 
 //   afterAll(async () => {
 //     await miniProgram.close()
