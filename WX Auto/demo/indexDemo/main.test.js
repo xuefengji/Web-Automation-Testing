@@ -29,7 +29,7 @@ describe('index', () => {
     // clickButton = await elements[0].$('van-stepper-54c9e8')
     //  console.log(elements[0].id)
     // expect(page.path).toMatch('pages/index/index');
-    var element = await elements[0].$('view')
+    // var element = await elements[0].$('view')
     console.log(element.length)
     await element[0].tap()
   //  var id = elements[0].id
@@ -44,7 +44,7 @@ describe('index', () => {
     // console.log(await miniProgram.currentPage())
   })
 
-//   afterAll(async () => {
-//     await miniProgram.close()
-//   })
+  // afterAll(async () => {
+  //   await miniProgram.close()
+  // })
 })
