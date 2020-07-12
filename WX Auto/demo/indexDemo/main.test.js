@@ -22,9 +22,10 @@ describe('index', () => {
     // console.log(page)
   }, 30000)
 
-  test('购买商品', async (page) =>{
+  test('购买商品', async () =>{
     //获取商品系列中的商品
-    let goodItems = await page.$$('.goods-item')
+    console.log(page)
+    let goodItems = await page.$$('.goods-item');
     console.log(goodItems.length)
     let tapElements = await goodItems[0].$$('view')
     await tapElements[0].tap()
@@ -35,7 +36,7 @@ describe('index', () => {
     console.log(await miniProgram.pageStack())
   })
 
-  afterAll(async () => {
-    await miniProgram.close()
-  })
+  // afterAll(async () => {
+  //   await miniProgram.close()
+  // })
 })
