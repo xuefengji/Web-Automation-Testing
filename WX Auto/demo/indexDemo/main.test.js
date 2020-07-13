@@ -14,18 +14,19 @@ describe('index', () => {
         projectPath: 'E:\\simlove-wechat-mini'
         // projectPath: 'F:\\simlove-wechat-mini'
     })
-    page = await miniProgram.reLaunch('/pages/index/index');
-    await page.waitFor(500);
+    // page = await miniProgram.reLaunch('/pages/index/index');
+    page = await miniProgram.currentPage();
+    // await page.waitFor(500);
+    console.log(await page);
     // elements = await getElement(page,'goods-thumb',1)
     // console.log(element.length)
     // console.log(element[0])
     // console.log(page)
   }, 30000)
 
-  test('购买商品', async () =>{
+  test('购买商品', async () => {
     //获取商品系列中的商品
-    console.log(page)
-    let goodItems = await page.$$('.goods-item');
+    let goodItems = await page.$$('.goods-list-content');
     console.log(goodItems.length)
     let tapElements = await goodItems[0].$$('view')
     await tapElements[0].tap()
