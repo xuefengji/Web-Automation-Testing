@@ -28,7 +28,7 @@ describe('index', () => {
     const page = await miniProgram.currentPage();
     const goodItems = await page.$$('.goods-item');
     // console.log(goodItems.length)
-    var tapElements = await goodItems[0].$$('view');
+    const tapElements = await goodItems[0].$$('view');
     await tapElements[0].tap();
     await page.waitFor(500);
     // var id = elements[0].id
