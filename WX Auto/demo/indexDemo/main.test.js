@@ -7,14 +7,14 @@ describe('index', () => {
   let miniProgram
   beforeAll(async () => {
     miniProgram = await automator.launch({
-        cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
-        // cliPath: 'E:\\微信web开发者工具\\cli.bat',
-        projectPath: 'E:\\simlove-wechat-mini'
-        // projectPath: 'F:\\simlove-wechat-mini'
+        // cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
+        cliPath: 'E:\\微信web开发者工具\\cli.bat',
+        // projectPath: 'E:\\simlove-wechat-mini'
+        projectPath: 'F:\\simlove-wechat-mini'
     })
     // page = await miniProgram.reLaunch('/pages/index/index');
-    // page = await miniProgram.currentPage();
-    // await page.waitFor(500);
+    const page = await miniProgram.currentPage();
+    await page.waitFor(500);
     // console.log(await page);
     // elements = await getElement(page,'goods-thumb',1)
     // console.log(element.length)
@@ -37,6 +37,17 @@ describe('index', () => {
     if(page.path!='/pages/goodsPage/goodsPresellDetail/index'){
       const button = await page.$$('button')[0];
       await button.tap();
+      await page.waitFor(500);
+      page = await miniProgram.currentPage();
+      if (await page.waitFor('.close-icon')){
+        const closeButton =  await page.$$('.close-icon')[0];
+        await closeButton.tap();
+      }
+    goodItems = await page.$$('.goods-item');
+    // console.log(goodItems.length)
+    tapElements = await goodItems[0].$$('view');
+    await tapElements[0].tap();
+    await page.waitFor(500);
     }
     const buyButton = await page.$$(".add2cart")[0];
     await page.waitFor(500);
