@@ -7,10 +7,10 @@ describe('index', () => {
   let miniProgram
   beforeAll(async () => {
     miniProgram = await automator.launch({
-        // cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
-        cliPath: 'E:\\微信web开发者工具\\cli.bat',
-        // projectPath: 'E:\\simlove-wechat-mini'
-        projectPath: 'F:\\simlove-wechat-mini'
+        cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat',
+        // cliPath: 'E:\\微信web开发者工具\\cli.bat',
+        projectPath: 'E:\\simlove-wechat-mini'
+        // projectPath: 'F:\\simlove-wechat-mini'
     })
     // page = await miniProgram.reLaunch('/pages/index/index');
     const page = await miniProgram.currentPage();
@@ -25,7 +25,7 @@ describe('index', () => {
   test('从首页进入详情页购买购买商品', async () => {
     //获取商品系列中的商品
     // await page.waitFor(500);
-    const page = await miniProgram.currentPage();
+    page = await miniProgram.currentPage();
     const goodItems = await page.$$('.goods-item');
     // console.log(goodItems.length)
     const tapElements = await goodItems[0].$$('view');
