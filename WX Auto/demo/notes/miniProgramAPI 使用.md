@@ -200,7 +200,7 @@ automator.launch({
 
 ##### Page
 
-+ page.path：页面路径
++ page.path：页面路径 
 + page.query：页面参数
 + page.$：获取页面元素
 + page.$$：获取页面元素数组
@@ -224,3 +224,4 @@ automator.launch({
 + element.text：获取元素文本信息
 + element.attribute：获取元素元素特性
 + element.property: 获取元素属性
++ element.tap: 元素点击事件
