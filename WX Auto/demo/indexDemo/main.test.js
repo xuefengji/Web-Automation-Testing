@@ -54,7 +54,7 @@ describe('index', () => {
     await buyButton.tap();
     await page.waitFor(500);
     const cart = await page.$('pay-btn');
-    await page.waitFor(500);
+    // await page.waitFor(500);
     await cart.tap()
     // console.log(page.path)
     // console.log(await miniProgram.pageStack())
