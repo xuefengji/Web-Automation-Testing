@@ -14,7 +14,7 @@ describe('index', () => {
     })
     // page = await miniProgram.reLaunch('/pages/index/index');
     const page = await miniProgram.currentPage();
-    await page.waitFor(500);
+    await page.waitFor(3000);
     // console.log(await page);
     // elements = await getElement(page,'goods-thumb',1)
     // console.log(element.length)
@@ -22,45 +22,50 @@ describe('index', () => {
     // console.log(page)
   }, 30000)
 
-  test('从首页进入详情页购买购买商品', async () => {
-    //获取商品系列中的商品
-    // await page.waitFor(500);
-    page = await miniProgram.currentPage();
-    const goodItems = await page.$$('.goods-item');
-    // console.log(goodItems.length)
-    const tapElements = await goodItems[0].$$('view');
-    await tapElements[0].tap();
-    await page.waitFor(500);
-    // var id = elements[0].id
-    // page = await miniProgram.navigateTo('/pages/goodsPage/goodsPresellDetail/index?id=' + id);
-    page = await miniProgram.currentPage();
-    if(page.path!='/pages/goodsPage/goodsPresellDetail/index'){
-      const button = await page.$$('button')[0];
-      await button.tap();
-      await page.waitFor(500);
+    test('从首页进入详情页购买购买商品', async () => {
+      //获取商品系列中的商品
+      // await page.waitFor(500);
       page = await miniProgram.currentPage();
-      if (await page.waitFor('.close-icon')){
-        const closeButton =  await page.$$('.close-icon')[0];
-        await closeButton.tap();
+      const goodItems = await page.$$('.goods-item');
+      // console.log(goodItems.length)
+      const tapElements = await goodItems[0].$$('view');
+      await tapElements[0].tap();
+      await page.waitFor(1000);
+      // var id = elements[0].id
+      // page = await miniProgram.navigateTo('/pages/goodsPage/goodsPresellDetail/index?id=' + id);
+      page = await miniProgram.currentPage();
+      if(page.path!='/pages/goodsPage/goodsPresellDetail/index'){
+        const button = await page.$$('button')[0];
+        await button.tap();
+        await page.waitFor(1000);
+        page = await miniProgram.currentPage();
+        if (await page.waitFor('.close-icon')){
+          const closeButton =  await page.$$('.close-icon')[0];
+          await closeButton.tap();
+        }
+      goodItems = await page.$$('.goods-item');
+      // console.log(goodItems.length)
+      tapElements = await goodItems[0].$$('view');
+      await tapElements[0].tap();
+      await page.waitFor(500);
       }
-    goodItems = await page.$$('.goods-item');
-    // console.log(goodItems.length)
-    tapElements = await goodItems[0].$$('view');
-    await tapElements[0].tap();
-    await page.waitFor(500);
-    }
-    const buyButton = await page.$$(".add2cart")[0];
-    await page.waitFor(500);
-    await buyButton.tap();
-    await page.waitFor(500);
-    const cart = await page.$('pay-btn');
-    // await page.waitFor(500);
-    await cart.tap()
-    // console.log(page.path)
-    // console.log(await miniProgram.pageStack())
+      const buyButton = await page.$$(".add2cart")[0];
+      console.log(buyButton.text());
+      await page.waitFor(500);
+      await buyButton.tap();
+      await page.waitFor(500);
+      const cart = await page.$('pay-btn');
+      // await page.waitFor(500);
+      await cart.tap()
+      // console.log(page.path)
+      // console.log(await miniProgram.pageStack())
+    })
+  
+    // afterAll(async () => {
+    //   await miniProgram.close()
+    // })
   })
 
-  // afterAll(async () => {
-  //   await miniProgram.close()
-  // })
-})
+  
+
+
