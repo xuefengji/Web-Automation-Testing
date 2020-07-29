@@ -13,9 +13,10 @@
   + 行为驱动设计
   + 数据驱动设计
 
-+ 微信小程序自动化研究
 
-miniprogram-auto
+微信小程序自动化研究:
+
++ miniprogram-auto
 ### Notes
 
 ### Demo
