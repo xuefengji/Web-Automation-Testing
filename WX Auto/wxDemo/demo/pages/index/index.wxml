@@ -8,7 +8,7 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <button size="mini" type="default" class="user-motto" open-type="getPhoneNumber" bindgetphonenumber="getphonenumber">点击</button>
      <!-- <button bindtap="clickme">点击我</button> -->
   </view>
   <!-- <view wx:if="{{array == 'WEBVIEW'}}">WEBVIEW</view>
