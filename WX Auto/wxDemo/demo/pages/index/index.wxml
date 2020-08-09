@@ -1,17 +1,21 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+ <view class="icon-box">
+    <view class="icon-small-wrp">
+      <icon class="icon-small" type="search" size="14"></icon>
+    </view>
+    <view class="icon-box-ctn">
+      <view class="icon-box-title">搜索</view>
+      <view class="icon-box-desc">用于搜索控件中，表示可搜索</view>
+    </view>
   </view>
-  <view class="usermotto">
-    <button size="mini" type="default" class="user-motto" open-type="getPhoneNumber" bindgetphonenumber="getphonenumber">点击</button>
-     <!-- <button bindtap="clickme">点击我</button> -->
+    <view class="page-section">
+    <view class="weui-cells__title">控制最大输入长度的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" maxlength="10" placeholder="最大输入长度为10" />
+      </view>
+    </view>
   </view>
-  <!-- <view wx:if="{{array == 'WEBVIEW'}}">WEBVIEW</view>
-  <view wx:elif="{{array == 'APP'}}"> APP </view>
-  <view wx:else="{{array == 'MINA'}}"> MINA </view> -->
+
 </view>

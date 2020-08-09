@@ -7,7 +7,9 @@ Page({
     // array:'APP',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    nbFrontColor: '#000000',
+    nbBackgroundColor: '#ffffff',
   },
   // clickme: function(){
   //   this.setData({ motto: "Hello xuefeng" })
@@ -19,6 +21,12 @@ Page({
     })
   },
   onLoad: function () {
+    this.setData({
+      nbTitle: '新标题',
+      nbLoading: true,
+      nbFrontColor: '#ffffff',
+      nbBackgroundColor: '#000000',
+    });
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
