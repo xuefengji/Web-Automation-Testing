@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest"
   },
-  "author": "",
+  "author": "xuef",
   "license": "ISC",
   "dependencies": {
     "jest": "^26.6.3",
