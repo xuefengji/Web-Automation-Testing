@@ -5,6 +5,11 @@ automator.launch({
   projectPath: 'E:\\work\\simlove-wechat-mini', // 项目文件地址
 }).then(async miniProgram => {
   const page = await miniProgram.reLaunch('/page/index/index')
-  await page.waitFor(3000)
+  await page.waitFor(async () => {
+    return (await miniProgram.pageStack().length) > 0})
+  // const pageStacks = await miniProgram.pageStack()
+
+  console.log(await page)
+ 
  
 })
