@@ -10,28 +10,34 @@ automator.launch({
   console.log(await page.path);
   if(await page.path === 'pages/index/index'){
     
-    if(await page.waitFor('.classify')){
-      console.log(1);
-      try{
-        const elements = await page.$$('.list');
-        console.log(await element.length)
-        const element = await elements[0].$$('.goods-item')[0]
-        // element = await element.$$('.top-img');
-        console.log(await element)
-        await element.tap();
-        
-        // console.log(await element.attribute('class'))
-        // const elem = await element[0]
-        // console.log(elem)
-        // await elem.tap()
-      }
-      catch(e){
-        console.log(e.message);
-      }
+    
+    console.log(1);
+    try{
+      await page.waitFor('.classify')
+      const goodItems = await page.$$('.goods-item"');
+      console.log(goodItems.length)
+      // console.log(elements[0])
+      const tapElements = await goodItems[0].$$('view');
+      await tapElements[0].tap();
+      // element.tap()
+      
+      // const element = await elements.$$('.goods-item')[0]
+      // // element = await element.$$('.top-img');
+      // console.log(await element)
+      // await element.tap();
+      
+      // console.log(await element.attribute('class'))
+      // const elem = await element[0]
+      // console.log(elem)
+      // await elem.tap()
     }
+    catch(e){
+      console.log(e.message);
+    }
+  }
  
   
-  }
+  
  
 
   // await miniProgram.close()
