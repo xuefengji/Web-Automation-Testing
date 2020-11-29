@@ -10,22 +10,26 @@ automator.launch({
   console.log(await page.path);
   if(await page.path === 'pages/index/index'){
     
-    await page.waitFor('#indexPage');
-    console.log(1);
-    try{
-      const element = await page.$$('.activity-card')[0];
-      console.log(element)
-      const elem = await element.$('.top-img');
-      await elem.tap();
-      // console.log(await element.length)
-      // console.log(await element.attribute('class'))
-      // const elem = await element[0]
-      // console.log(elem)
-      // await elem.tap()
+    if(await page.waitFor('.classify')){
+      console.log(1);
+      try{
+        const elements = await page.$$('.list');
+        console.log(await element.length)
+        const element = await elements[0].$$('.goods-item')[0]
+        // element = await element.$$('.top-img');
+        console.log(await element)
+        await element.tap();
+        
+        // console.log(await element.attribute('class'))
+        // const elem = await element[0]
+        // console.log(elem)
+        // await elem.tap()
+      }
+      catch(e){
+        console.log(e.message);
+      }
     }
-    catch(e){
-      console.log(e.message);
-    }
+ 
   
   }
  
