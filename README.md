@@ -1,27 +1,18 @@
-# Web-Automation-Testing
+# miniprogram-automator 
 
-自动化测试研究学习：
-+ 使用selenium进行web自动化测试
-  ### Notes
-  + [Selenium基础操作](../web Auto/notes/Selenium.md)
-  + [数据驱动介绍](../web Auto/notes/数据驱动.md)
-  + [行为驱动介绍](../web Auto/notes/行为驱动.md)
+## 1. 安装
 
-  ### Demo
-  + unittest框架使用
-  + PO模型设计
-  + 行为驱动设计
-  + 数据驱动设计
+使用 npm 进行安装
 
+npm install miniprogram-automator --save
 
-微信小程序自动化研究:
+## 2. 使用中遇到的问题
 
-+ miniprogram-auto
-### Notes
+### 2.1 elelment.tap() 使用
 
-### Demo
+在使用 tap()  函数对元素进行点击时，该元素自身必须绑定 bindtap 或 catchtap 时，此元素使用 tap 函数时才会有效
 
 
 
-
+### 2.2 
 
