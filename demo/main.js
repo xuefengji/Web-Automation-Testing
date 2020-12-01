@@ -7,7 +7,7 @@ automator.launch({
 }).then(async miniProgram => {
   // const page = await miniProgram.reLaunch('/pages/index/index')
   //获取当前页面
-  let page = await miniProgram.currentPage();
+  const page = await miniProgram.currentPage();
   console.log(await page.path);
   //判断当前页面是否是首页
   if(await page.path === 'pages/index/index'){
@@ -21,17 +21,22 @@ automator.launch({
       await tapElements[0].tap();
       // console.log(await miniProgram.pageStack())
       // element.tap()
-      let detailpage = await miniProgram.currentPage()
+      await page.waitFor(3000)
+      const detailpage = await miniProgram.currentPage()
       console.log(detailpage.path)
       await detailpage.waitFor('.add2cart')
       const add2cart = await detailpage.$('.add2cart')
-      console.log(add2cart)
-      console.log(await add2cart.text())
+      // console.log(add2cart)
+      // console.log(await add2cart.text())
       if(await add2cart.text() === '单次购买'){
+        await detailpage.waitFor(30000)
         await add2cart.tap()
-        await detailpage.waitFor('.pay-btn')
-        const pay_btn = await detailpage.$('.pay-btn')
-        await pay_btn.tap()
+        
+        // await detailpage.waitFor('.pay-btn')
+        // const cartbox = await detailpage.$('.cart-box')
+        // console.log(cartbox)
+
+        // await pay_btn.tap()
       }
 
 
