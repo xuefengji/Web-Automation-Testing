@@ -21,7 +21,7 @@ automator.launch({
       await tapElements[0].tap();
       // console.log(await miniProgram.pageStack())
       // element.tap()
-      await page.waitFor(3000)
+      await page.waitFor(300)
       const detailpage = await miniProgram.currentPage()
       console.log(detailpage.path)
       await detailpage.waitFor('.add2cart')
@@ -29,11 +29,19 @@ automator.launch({
       // console.log(add2cart)
       // console.log(await add2cart.text())
       if(await add2cart.text() === '单次购买'){
-        await detailpage.waitFor(30000)
+        await detailpage.waitFor(300)
         await add2cart.tap()
-        
+        await detailpage.waitFor(3000)
         // await detailpage.waitFor('.pay-btn')
         // const cartbox = await detailpage.$('.cart-box')
+        // console.log(1)
+        // const shoptap = await cartbox.$('shop-cart')
+        // console.log(await shoptap.wxml())
+        const paybtn = await detailpage.$('.cart-index--pay-btn')
+        await paybtn.tap()
+        await detailpage.waitFor(3000)
+        // console.log(paybtn)
+        // console.log(await shoptap.wxml())
         // console.log(cartbox)
 
         // await pay_btn.tap()
