@@ -21,15 +21,23 @@ automator.launch({
       await tapElements[0].tap();
       // console.log(await miniProgram.pageStack())
       // element.tap()
-      await page.waitFor(300)
+      await page.waitFor(3000)
       const detailpage = await miniProgram.currentPage()
       console.log(detailpage.path)
-      await detailpage.waitFor('.add2cart')
+      //判断是否有授权地址
+      await detailpage.waitFor('.user-location-content')
+      const address = await detailpage.$('.user-location-content')
+      const addressText = await address.$('.location-name')
+      console.log(addressText)
+      if(await addressText.text() === " "){
+        await address.tap()
+      }
+      
       const add2cart = await detailpage.$('.add2cart')
       // console.log(add2cart)
       // console.log(await add2cart.text())
       if(await add2cart.text() === '单次购买'){
-        await detailpage.waitFor(300)
+        await detailpage.waitFor(3000)
         await add2cart.tap()
         await detailpage.waitFor(3000)
         // await detailpage.waitFor('.pay-btn')
