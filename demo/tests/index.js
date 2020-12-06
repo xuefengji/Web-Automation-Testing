@@ -1,12 +1,6 @@
-const automator = require('miniprogram-automator')
-
-automator.launch({
-    cliPath: 'D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat', // 工具 cli 位置，如果你没有更改过默认安装位置，可以忽略此项
-    projectPath: 'E:\\work\\simlove-wechat-mini', // 项目文件地址
-    timeout: 50000 //设置超时时间，默认为30000
-}).then(async miniProgram => {
-  // const page = await miniProgram.reLaunch('/pages/index/index')
-  //获取当前页面
+async function indexToOrder(miniProgram){
+ // const page = await mini.reLaunch('/pages/index/index')
+ //获取当前页面
   const page = await miniProgram.currentPage();
   console.log(await page.path);
   //判断当前页面是否是首页
@@ -62,10 +56,13 @@ automator.launch({
       console.log(e.message);
     }
   }
- 
+}
+
+module.exports = indexToOrder
+
+
   
   
  
 
   // await miniProgram.close()
-})
