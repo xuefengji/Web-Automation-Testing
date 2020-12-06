@@ -1,3 +1,7 @@
+/*
+author: xuefengji
+describe: 从商品详情页进入定单结算页
+*/
 async function indexToOrder(miniProgram){
  // const page = await mini.reLaunch('/pages/index/index')
  //获取当前页面
