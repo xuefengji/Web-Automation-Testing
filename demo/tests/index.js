@@ -1,6 +1,6 @@
 /*
 author: xuefengji
-describe: 从商品详情页进入定单结算页
+describe: 从首页进入单次商品详情页，再从商品详情页进入定单结算页
 */
 const getOneProduct = require('../utils/getProduct')
 const singleBuy = require('../utils/singleBuy')
