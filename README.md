@@ -24,7 +24,7 @@ utils ：封装一些公共工具
 
 
 ## 项目运行
-
++ 需要有 node 环境，如果没有安装 node，先安装
 + 下载项目后，需要使用 npm install 安装相关的依赖
 + main.js 是该项目的入口，执行 node main.js 即可
 
