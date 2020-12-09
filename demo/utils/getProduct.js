@@ -1,6 +1,6 @@
 /**
  * author: xuefengji
- * describe: 获取单次商品
+ * describe: 获取单次商品并进入详情页
  */
 
 async function getOneProduct(miniProgram){
@@ -21,7 +21,7 @@ async function getOneProduct(miniProgram){
       console.log(2)
       
     }catch(e){
-      console.log("获取商品进入详情页失败！")
+      console.log("商品进入详情页失败！")
     }
   }
 }
