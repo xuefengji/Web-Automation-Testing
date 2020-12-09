@@ -1,0 +1,18 @@
+{
+    "token": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYS1vUEZPandMaTJRRGlHcks5ZTkyZlVodC1HQW1vIiwiY3JlYXRlZCI6MTYwNzUxNjc2MDYwNiwiZXhwIjoxNjA3NTc2NzYwLCJ1c2VyIjoie1wiaWRcIjoxMjU0MjcyLFwibmFtZVwiOlwibWEtb1BGT2p3TGkyUURpR3JLOWU5MmZVaHQtR0Ftb1wiLFwibmlja1wiOlwi5o-h5LiN5L2P55qE5rKZXCIsXCJzdGF0dXNcIjpcImFjdGl2ZVwiLFwicGhvbmVcIjpcIjE1MjA2MTkwNzI4XCJ9In0.pC8FYpPlGwOLWmiGfMzvVZp6vHtlVFDBhuQbUSBnYM55PdVAg7uRJjv_e55pcTBA-eulhG49RlJnH92gWGRSbA",
+    "userId":1254272,
+    "receiver":"qqq",
+    "phone":"15367879876",
+    "province":"江苏",
+    "provinceNo":"320000",
+    "cityNo":"320200",
+    "city":"无锡市",
+    "districtNo":"320214",
+    "district":"新吴区",
+    "addrInfo":"新吴区国家软件园金牛座",
+    "street":"",
+    "streetNo":"",
+    "field1":"",
+    "lat":31.490805,
+    "lng":120.373871
+}
