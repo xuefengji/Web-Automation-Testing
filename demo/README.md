@@ -16,7 +16,7 @@ npm install miniprogram-automator --save
 
 ### 2.2 获取自定义组件中的元素
 
-获取购物车组件中的结算按钮： ![1606832462261](E:/myself/project/Automation-Testing/imgs/1.png)
+获取购物车组件中的结算按钮： ![1606832462261](../imgs/1.png)
 
 按照 api 上介绍的文档，使用 page.$('.pay-btn')，直接获取元素时，值为 null，既没有获取到
 
