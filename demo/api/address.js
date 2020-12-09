@@ -4,6 +4,7 @@
  */
 const https = require('https')
 
+function address(){
 //获取user.json中的数据
 const userJson = require('../configs/user.json')
 
@@ -51,7 +52,9 @@ const req = https.request(options,function(res){
     })
 req.write(requestData);
 req.end();
+}
 
+module.exports = address
 
   
 
