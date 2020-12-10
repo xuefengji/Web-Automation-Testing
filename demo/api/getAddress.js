@@ -22,15 +22,13 @@ function getAddress(){
     const req = https.request(options,function(res){
             res.setEncoding('utf-8');
             res.on('data', function (data) {  
-                console.log(typeof(data));
+                // console.log(typeof(data));
                 const addressData = JSON.parse(data)
-                console.log(typeof(addressData));
-                console.log(addressData.data.total)
+                // console.log(typeof(addressData));
+                // console.log(addressData.data.total)
                 if(addressData.data.total==0){
                     address()
                 } 
-                
-                
                 })
             res.on("error", function (e) {
                     console.error("====================================================" + e);
