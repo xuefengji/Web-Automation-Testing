@@ -3,13 +3,12 @@
  * describe: 添加地址
  */
 const https = require('https')
-
-function address(){
 //获取user.json中的数据
 const userJson = require('../configs/user.json')
 
+function address(){
 //发送数据
-const requestData = JSON.stringify({
+    const requestData = JSON.stringify({
     "userId":userJson.userId,
     "receiver":userJson.receiver,
     "phone":userJson.phone,
@@ -26,7 +25,7 @@ const requestData = JSON.stringify({
     "lat":userJson.lat,
     "lng":userJson.lng})
 //参数
-const options = {
+    const options = {
         hostname: "test.api.simplelove.com.cn",
         port: 443, //443
         path: "/api/address/" ,
@@ -38,10 +37,10 @@ const options = {
             "Accept": "application/json",
             "Authorization":userJson.token,
             "Host": "test.api.simplelove.com.cn"
-        },
+        }
 
     };
-const req = https.request(options,function(res){
+    const req = https.request(options,function(res){
         res.setEncoding('utf-8');
         res.on('data', function (chunk) {  
             console.log(chunk.toString());  
@@ -50,8 +49,8 @@ const req = https.request(options,function(res){
                 console.error("====================================================" + e);
             });
     })
-req.write(requestData);
-req.end();
+    req.write(requestData);
+    req.end();
 }
 
 module.exports = address
