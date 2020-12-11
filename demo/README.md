@@ -42,6 +42,10 @@ const paybtn = await detailpage.$('.cart-index--pay-btn')
 
 
 
+### 2.3 多个 async 函数同步执行
+
+直接在 async 函数前增加 await 关键字，阻塞进程
+
 
 
 
