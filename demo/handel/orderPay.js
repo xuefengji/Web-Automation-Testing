@@ -32,10 +32,12 @@ async function orderPay(miniProgram){
             await orderPage.waitFor(300)
             const payButton = await orderPage.$('.pay-button')
             await payButton.tap()
+            await orderPage.waitFor(3000)
+        }else{
+            console.log('该商品当前无库存')
         }
-        console.log('当前无库存')
     }catch(e){
-
+        console.log(e)
     }
     
 
