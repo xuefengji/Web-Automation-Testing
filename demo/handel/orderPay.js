@@ -13,7 +13,10 @@ async function orderPay(miniProgram){
         await getAddress()
         await noAddress.tap()
     }
-     
+    await orderPage.waitFor(3000)
+    const selectAddress = miniProgram.currentPage()
+    const addDetail = await selectAddress.$$('selectAddress')
+    console.log(await addDetail.length)
  }
 
 
