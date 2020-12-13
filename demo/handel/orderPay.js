@@ -4,6 +4,7 @@
  */
 const address = require('../api/address')
 const getAddress = require('../api/getAddress')
+const ranNum = require('../utils/getRandomNum')
 async function orderPay(miniProgram){
     const orderPage = await miniProgram.currentPage()
     console.log(orderPage.path)
@@ -12,11 +13,15 @@ async function orderPay(miniProgram){
     if(noAddress){
         await getAddress()
         await noAddress.tap()
+        await orderPage.waitFor(30000)
+        const selectAddress = await miniProgram.currentPage()
+        console.log(selectAddress.path)
+        const addDetail = await selectAddress.$$('.add-detail-top')
+        console.log(await addDetail.length)
+        await addDetail[ranNum(addDetail.length)].tap()
     }
-    await orderPage.waitFor(3000)
-    const selectAddress = miniProgram.currentPage()
-    const addDetail = await selectAddress.$$('selectAddress')
-    console.log(await addDetail.length)
+    
+    
  }
 
 

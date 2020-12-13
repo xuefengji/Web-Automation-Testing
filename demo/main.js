@@ -3,7 +3,7 @@ author: xuefengji
 describe: 项目主入口
  */
 const automator = require('miniprogram-automator')
-const indexToOrder = require('./testsCases/index')
+const indexToOrder = require('./testCases/index')
 const tool = require('./configs/tool.json')
 
 automator.launch({
