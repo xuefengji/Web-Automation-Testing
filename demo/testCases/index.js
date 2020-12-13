@@ -2,9 +2,9 @@
 author: xuefengji
 describe: 从首页进入单次商品详情页，再从商品详情页进入定单结算页
 */
-const getOneProduct = require('../handel/getProduct')
-const singleBuy = require('../handel/singleBuy')
-const orderPay = require('../handel/orderPay')
+const getOneProduct = require('../handle/getProduct')
+const singleBuy = require('../handle/singleBuy')
+const orderPay = require('../handle/orderPay')
 async function indexToOrder(miniProgram){
      //获取首页或全部商品页的任意商品
       await getOneProduct(miniProgram)
