@@ -11,6 +11,6 @@ automator.launch({
     projectPath: tool['projectPath'], // 项目文件地址
     timeout: tool['timeout'] //设置超时时间，默认为30000
 }).then(async miniProgram => {
-    indexToOrder(miniProgram)
-  // await miniProgram.close()
+    await indexToOrder(miniProgram)
+    // await miniProgram.close()
 })

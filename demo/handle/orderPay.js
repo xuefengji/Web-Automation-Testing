@@ -8,9 +8,10 @@ const ranNum = require('../utils/getRandomNum')
 async function orderPay(miniProgram){
     const orderPage = await miniProgram.currentPage()
     console.log(orderPage.path)
+    await orderPage.waitFor(3000)
     try{
         const noAddress = await orderPage.$('.no-address')
-        await orderPage.waitFor(300)
+        
         //判断是否有默认地址
         if(noAddress){
             await getAddress()
@@ -23,6 +24,7 @@ async function orderPay(miniProgram){
             await addDetail[ranNum(addDetail.length)].tap()
             await selectAddress.waitFor(3000)
         }
+
         const dateTime = await orderPage.$$('.opera-item')
         console.log(await dateTime)
         await dateTime[1].tap()
